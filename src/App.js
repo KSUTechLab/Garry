@@ -1,5 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
-import { Home, Login, Test, Callback } from './pages';
+import { Home, Login, Test } from './pages';
+import Callback from './auth/naver/callback';
 
 function App() {
   return (
@@ -8,7 +9,7 @@ function App() {
           <Route path = '/' element = {<Home/>}/>
           <Route path = '/login' element = {<Login/>}/>
           <Route path = '/Test' element = {<Test/>}/>
-          <Route path = '/callback' element = {<Callback/>}/>
+          <Route path = '/auth/naver/callback' element = {<Callback/>}/>
         </Routes>
     </div>
   );
