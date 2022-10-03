@@ -1,5 +1,5 @@
 import { React, useEffect, useState } from 'react';
-import { Navigate } from 'react-router-dom'
+import { Navigate, useNavigate } from 'react-router-dom'
 
 export default function Test(){
     const tokenId = 'com.naver.nid.oauth.state_token';
@@ -18,12 +18,19 @@ export default function Test(){
 }
 
 function Success(){
+    const navigate = useNavigate();
+    
     return(
         <>
         <h1>Welcome ~~</h1>
         <h1>Welcome ~~</h1>
         <h1>Welcome ~~</h1>
         <h1>Welcome ~~</h1>
+        <button onClick={() => {
+            localStorage.clear();
+            alert('로그아웃 되셨습니다');
+            navigate('/');
+        }}>로그아웃</button>
         </>
     );
 }

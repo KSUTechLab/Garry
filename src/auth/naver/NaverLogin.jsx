@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const NaverLogin = ({ setGetToken, setUserInfo }) => {
+const NaverLogin = ({ /*setGetToken, setUserInfo*/ }) => {
 	const navigate = useNavigate();
 	const { naver } = window;
 
@@ -18,11 +18,11 @@ const NaverLogin = ({ setGetToken, setUserInfo }) => {
 		})
 		naverLogin.init()  
       
-    	naverLogin.getLoginStatus(async function (status) {
-			if (status) {
-               setUserInfo(naverLogin.user)
-			}
-		})     
+    	// naverLogin.getLoginStatus(async function (status) {
+		// 	if (status) {
+        //        setUserInfo(naverLogin.user)
+		// 	}
+		// })     
 	}
 
 	    const userAccessToken = () => {
@@ -34,10 +34,9 @@ const NaverLogin = ({ setGetToken, setUserInfo }) => {
 			console.log(token);
 
 			localStorage.setItem('access_token', token)
-			setGetToken(token)
 
 			console.log(localStorage.getItem('com.naver.nid.oauth.state_token'));
-			navigate(-1);
+			navigate('/');
 		}
 
 	useEffect(() => {

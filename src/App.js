@@ -1,6 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 import { Home, Login, Test } from './pages';
-import Callback from './auth/naver/callback';
+import NaverLogin from './auth/naver/NaverLogin';
 
 function App() {
   return (
@@ -9,7 +9,7 @@ function App() {
           <Route path = '/' element = {<Home/>}/>
           <Route path = '/login' element = {<Login/>}/>
           <Route path = '/Test' element = {<Test/>}/>
-          <Route path = '/auth/naver/callback' element = {<Callback/>}/>
+          <Route path = '/auth/naver/NaverLogin' element = {<NaverLogin/>}/>
         </Routes>
     </div>
   );
