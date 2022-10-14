@@ -16,7 +16,7 @@ const NaverLogin = ({ /*setGetToken, setUserInfo*/ }) => {
 			loginButton: { color: 'green', type: 3, height: 58 },
 			callbackHandle: true,
 		})
-		naverLogin.init()  
+		naverLogin.init();
       
     	// naverLogin.getLoginStatus(async function (status) {
 		// 	if (status) {
